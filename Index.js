@@ -1,12 +1,11 @@
-<script src="js/bootstrap.min.js></script>
+document.querySelector("h1").innerText = "Productos";
 
-document.querySelector("h1").innerText = "Productos"
-
-let arrProds = [];
+let CardsArray = [];
 
 for (let i = 1; i <= 10; i++) {
-    CardsArray push(
-    <div class="card">
+    CardsArray.push(
+    `
+    <div class="card"> 
         <img src="https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/${i}.jpg" alt="Producto ${i}"></img>
         <div class="card-body">
             <h5 class="card-tittle">Car $(i)</h5>
@@ -14,9 +13,7 @@ for (let i = 1; i <= 10; i++) {
             <p class="card-price">$11111</p>
             <buttom type="buttom" class="btn-outline">Buy Now</buttom></p>
         </div>
-    </div> );
-
-    CardsArray.push(card);
+    </div> `);
 }
 
-Selection.innerHTML = array.join().replaceAll(",","");
+document.querySelector(".productos-container").innerHTML = CardsArray.join("")
