@@ -1,8 +1,16 @@
-document.querySelector("h1").innerText = "Productos";
+class Producto {
+    constructor(titulo, detalle, stock, precio, imagen) {
+        this.titulo = titulo;
+        this.detalle = detalle;
+        this.stock = stock;
+        this.precio = precio;
+        this.imagen = imagen;
+    }
+}
 
-function cards () {
-    let CardsArray = [];
-for (let i = 1; i < 10; i++) {
+let prod = new Producto("Mustang", "muy caro", 1, 100000000, "https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/${i}.jpg")
+
+const card1 =
     CardsArray.push(`
         <div class="card"> 
         <img src="https://66d9ee6caa07a954166f10ed--gregarious-melba-cacdba.netlify.app/${i}.jpg" class="card-img" alt="Producto ${i}"></img>
@@ -13,6 +21,4 @@ for (let i = 1; i < 10; i++) {
             <button type="button" class="btn-outline">But Now</button>
         </div>
     </div> `);
-}
-document.querySelector(".productos-container").innerHTML = CardsArray.join("");
-}
+    document.querySelector(".Producto").innerHTML = card1
